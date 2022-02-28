@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
+    Radio rad = new Radio(1,"rad300",0,9,0,100);
 
     @Test
     void setCurrentChannel1() {
-        Radio rad = new Radio();
         rad.setCurrentChannel1(9);
 
         int expected = 0;
@@ -19,7 +19,6 @@ class RadioTest {
 
     @Test
     void setCurrentChannel2() {
-        Radio rad = new Radio();
         rad.setCurrentChannel2(0);
 
         int expected = 9;
@@ -30,7 +29,6 @@ class RadioTest {
 
     @Test
     void setCurrentVolume1() {
-        Radio rad = new Radio();
         rad.setCurrentVolume1(1);
 
         int expected = 2;
@@ -41,7 +39,6 @@ class RadioTest {
 
     @Test
     void setCurrentVolume2() {
-        Radio rad = new Radio();
         rad.setCurrentVolume2(10);
 
         int expected = 9;
