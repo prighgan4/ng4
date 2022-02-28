@@ -1,27 +1,10 @@
 package Radio;
 
 public class Radio {
-    private int id;
-    private String name = "rad300";
     public int currentChannel;
-    public int currentVolume;
-    public int firstChannel = 0;
-    private int lastChannel = 9;
-    private int min = 0;
-    private int max = 100;
+    int firstChannel = 0;
+    int lastChannel = 9;
 
-    public Radio(int id, String name, int firstChannel, int lastChannel, int min, int max) {
-        this.id = id;
-        this.name = name;
-        this.firstChannel = firstChannel;
-        this.lastChannel = lastChannel;
-        this.min = min;
-        this.max = max;
-    }
-
-    public int getId() {
-        return this.id;
-    }
 
     public void setCurrentChannel1(int next) {
         if (next >= firstChannel) {
@@ -49,9 +32,13 @@ public class Radio {
         return currentChannel;
     }
 
+    public int currentVolume;
+    int firstVolume = 1;
+    int lastVolume = 10;
+
     public void setCurrentVolume1(int currentVolume1) {
 
-        if (currentVolume1 >= min) {
+        if (currentVolume1 >= firstVolume) {
             currentVolume1 = currentVolume1 + 1;
         }
         currentVolume = currentVolume1;
@@ -59,7 +46,7 @@ public class Radio {
 
 
     public void setCurrentVolume2(int currentVolume2) {
-        if (currentVolume2 <= max) {
+        if (currentVolume2 <= lastVolume) {
             currentVolume2 = currentVolume2 - 1;
         }
         currentVolume = currentVolume2;
@@ -70,7 +57,3 @@ public class Radio {
     }
 
 }
-
-
-
-
