@@ -7,20 +7,22 @@ public class Radio {
 
 
     public void setCurrentChannel1(int next) {
-        if (next == firstChannel) {
+        if (next >= firstChannel) {
             next = next + 1;
         }
-        if (next == lastChannel) {
+
+        if (next > lastChannel) {
             next = firstChannel;
         }
         currentChannel = next;
     }
 
     public void setCurrentChannel2(int prev) {
-        if (prev == lastChannel) {
+        if (prev <= lastChannel) {
             prev = prev - 1;
         }
-        if (prev == firstChannel) {
+
+        if (prev < firstChannel) {
             prev = lastChannel;
         }
         currentChannel = prev;
@@ -35,14 +37,16 @@ public class Radio {
     int lastVolume = 10;
 
     public void setCurrentVolume1(int currentVolume1) {
-        if (currentVolume1 < lastVolume) {
+
+        if (currentVolume1 >= firstVolume) {
             currentVolume1 = currentVolume1 + 1;
         }
         currentVolume = currentVolume1;
     }
 
+
     public void setCurrentVolume2(int currentVolume2) {
-        if (currentVolume2 == lastVolume) {
+        if (currentVolume2 <= lastVolume) {
             currentVolume2 = currentVolume2 - 1;
         }
         currentVolume = currentVolume2;

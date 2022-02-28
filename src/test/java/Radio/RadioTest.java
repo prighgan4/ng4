@@ -9,9 +9,9 @@ class RadioTest {
     @Test
     void setCurrentChannel1() {
         Radio rad = new Radio();
-        rad.setCurrentChannel1(9);
+        rad.setCurrentChannel1(8);
 
-        int expected = 0;
+        int expected = 9;
         int actual = rad.getCurrentChannel();
 
         assertEquals(expected, actual);
@@ -20,9 +20,9 @@ class RadioTest {
     @Test
     void setCurrentChannel2() {
         Radio rad = new Radio();
-        rad.setCurrentChannel2(0);
+        rad.setCurrentChannel2(7);
 
-        int expected = 9;
+        int expected = 6;
         int actual = rad.getCurrentChannel();
 
         assertEquals(expected, actual);
